@@ -39,7 +39,7 @@ $$
 (\vec{P_{0}}-C )^2+2t(\vec{P_{0}}-C )\cdot \vec{D}+t^2\left | \vec{D}  \right |^2  =R^2  
 $$
 
-我们令 $a=dot(D *D)$， $\Delta=\vec{P_{0}}-C$， $b=2\cdot(\Delta\cdot D)$，即可
+我们令 $a=dot(D *D)$，$\Delta=\vec{P_{0}}-C$，$b=2\cdot(\Delta\cdot D)$，即可
 
 
 
