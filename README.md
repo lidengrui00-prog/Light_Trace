@@ -27,7 +27,7 @@ $$
 \vec{P} = \vec{P_{0}} + t\vec{D}   \qquad (2-1)
 $$
 
-其中 $\vec{P_{0}}$ 为光线的初始起点向量，而 $\vec{D}$ 为光线的方向余弦(单位方向向量)。对于球面的方程，可以写为：
+其中 $\vec{P_{0}}$为光线的初始起点向量，而 $\vec{D}$为光线的方向余弦(单位方向向量)。对于球面的方程，可以写为：
 
 $$
 \left| \vec{P} - C \right|^2 = R^2  \qquad (2-2)
@@ -39,7 +39,7 @@ $$
 (\vec{P_{0}}-C )^2+2t(\vec{P_{0}}-C )\cdot \vec{D}+t^2\left | \vec{D}  \right |^2  =R^2  
 $$
 
-我们令 $a=dot(D *D)$，$\Delta=\vec{P_{0}}-C$，$b=2\cdot(\Delta\cdot D)$，即可
+我们令 $a=dot(D *D)$， $\Delta=\vec{P_{0}}-C$， $b=2\cdot(\Delta\cdot D)$，即可
 
 
 
