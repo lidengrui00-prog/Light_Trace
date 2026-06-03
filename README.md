@@ -17,6 +17,7 @@ $$
 ## 2.1 曲面与光线交点
 **对于简单的球面镜**，如图1所示，求交点的方法使用二次求根法。
   <img src="Task_trace/Picture_instructions/Sphere.drawio.png" alt="球面示意图">
+  
 设曲线的向量表达式为:
 
 $$
