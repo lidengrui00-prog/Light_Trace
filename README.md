@@ -21,13 +21,15 @@ $$
   <sub>图1：球面示意图</sub>
 </p>
 设曲线的向量表达式为:
-$$ 
-\vec{P} = \vec{P_{0}}+t\vec{D} \qquad(2-1)
+
 $$
+\vec{P} = \vec{P_{0}} + t\vec{D} \qquad (2-1)
+$$
+
 其中$\vec{P_{0}}$为光线的初始起点向量，而$\vec{D}$为光线的方向余弦(单位方向向量)。对于球面的方程，可以写为：
 
 $$
-\left| \vec{P} - C \right|^2 = R^2 \qquad(2-2)
+\left| \vec{P} - C \right|^2 = R^2 \qquad (2-2)
 $$
 其中$C$为球心坐标，将
 
