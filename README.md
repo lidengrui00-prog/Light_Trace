@@ -20,6 +20,7 @@ $$
   <img src="Task_trace/Picture_instructions/Sphere.drawio.png" alt="球面示意图"><br>
   <sub>图1：球面示意图</sub>
 </p>
+
 设曲线的向量表达式为:
 
 $$
@@ -31,6 +32,7 @@ $$
 $$
 \left| \vec{P} - C \right|^2 = R^2 \qquad (2-2)
 $$
+
 其中$C$为球心坐标，将
 
 
