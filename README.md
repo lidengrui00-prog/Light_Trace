@@ -15,12 +15,8 @@ $$
 # 2.代码解析
 在追迹过程中，由于只用到了两种曲面，我只在代码中定义了球面和XY多项式曲面。系统的入瞳直接是25mm，代码中先追迹了起点为(0.0, 12.5, 0.0)，方向为(0, 0, 1)光线，来得到光阑半径，之后在根据光阑半径，用坐标下降法来得到各个视场下的光线起点。
 ## 2.1 曲面与光线交点
-对于简单的球面镜，如图1所示，求交点的方法使用二次求根法。
-<p align="center">
-  <img src="Task_trace/Picture_instructions/Sphere.drawio.png" alt="球面示意图"><br>
-  <sub>图1：球面示意图</sub>
-</p>
-
+**对于简单的球面镜**，如图1所示，求交点的方法使用二次求根法。
+  <img src="Task_trace/Picture_instructions/Sphere.drawio.png" alt="球面示意图">
 设曲线的向量表达式为:
 
 $$
@@ -39,7 +35,9 @@ $$
 (\vec{P_{0}}-C )^2+2t(\vec{P_{0}}-C )\cdot \vec{D}+t^2\left | \vec{D}  \right |^2  =R^2  
 $$
 
-我们令 $a=dot(D *D)$， $\Delta=\vec{P_{0}}-C$， $b=2\cdot(\Delta\cdot D)$，即可
+我们令 $a=dot(D *D)$， $\Delta=\vec{P_{0}}-C$， $b=2\cdot(\Delta\cdot D)$，这即是代码中各个参数的由来，接下来可以利用求根公式来解出 $t$即传播距离。
+**对于XY多项式曲面**，其面型图为
+
 
 
 
