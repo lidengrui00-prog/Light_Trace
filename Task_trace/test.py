@@ -338,7 +338,7 @@ def trace_ray(start_point,start_dir,surfaces,n_func):
 if __name__ == "__main__":
     lens_file = r"C:\python_work\光线追迹\Task_trace\Lens_parameter.csv"
     material_file = r"C:\python_work\光线追迹\Task_trace\material_parameter.csv"
-    wavelength = 0.486133
+    wavelength = 0.587562
     surfaces, n_func = load_optical_system(lens_file, material_file, wavelength)
     print(f"共加载 {len(surfaces)} 个表面")
 
@@ -352,3 +352,5 @@ if __name__ == "__main__":
         print(f"表面 {idx}: 交点 = {pt}")
         print(f"        方向 = {dirs[idx]}")
         print("-" * 15)
+    
+    print(f"The Stop Radius is {result['stop_radius']}mm")

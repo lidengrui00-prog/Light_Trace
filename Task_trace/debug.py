@@ -2,11 +2,11 @@ import numpy as np
 import torch
 import matplotlib.pyplot as plt
 
-plt.figure(figsize=(5,5))
-x = np.linspace(0,1,10)
-y = 2 * x + 1
-z = 5 * x + 3
-
-plt.plot(x,y)
-plt.plot(x,z)
-plt.show()
+c = []
+a= [[1,2,3],[4,5,6]]
+b = [[3,4,5],[5,6,7]]
+c.append(a)
+c.append(b)
+c = np.array(c)
+c = c.reshape(-1,3)
+print(c)

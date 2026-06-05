@@ -46,8 +46,7 @@ for wavelength in wavelengths:
 
     for i, target in enumerate(pupil_xy):
         target_tuple = (target[0], target[1])
-        start_pt, success, err, iters = optimize_coordinate_descent(
-            target_tuple, direction, surfaces, n_func)
+        start_pt, success, err, iters = optimize_coordinate_descent(target_tuple, direction, surfaces, n_func)
         if not success:
             continue
 

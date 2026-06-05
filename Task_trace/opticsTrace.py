@@ -367,7 +367,6 @@ def optimize_coordinate_descent(target_xy, direction, surfaces, n_func, max_iter
 
     # ---- 交替优化循环 ----
     for it in range(max_iter):
-        # 第 1 步：固定 y0，割线法更新 x0
         x0 = secant_step_1d(error_x, x0)
 
         y0 = secant_step_1d(error_y, y0)

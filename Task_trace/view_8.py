@@ -11,7 +11,7 @@ markers = ['^',     '+',    's']
 labels = ['0.656273 μm', '0.4861327 μm', '0.5875618 μm']
 
 theta = math.radians(8.0)
-phi = math.radians(3.0)
+phi = math.radians(6.0)
 dir_z = 1/math.sqrt(math.tan(theta)**2 + math.tan(phi)**2 +1)
 dir_x = math.tan(theta) * dir_z
 dir_y = math.tan(phi) * dir_z
@@ -19,6 +19,7 @@ direction = np.array([dir_x, dir_y, dir_z])
 
 all_image_points = {}
 all_results = {}
+all_point = []
 
 for wavelength in wavelengths:
 
@@ -62,6 +63,7 @@ for wavelength in wavelengths:
     print(f"成功追迹: {success_count} / {total} 条光线")
 
     if len(image_points_xy) > 0:
+        all_point.append(image_points_xy)
         image_points_xy = np.array(image_points_xy)
 
         ps_tensor = torch.tensor(image_points_xy)
@@ -76,6 +78,16 @@ for wavelength in wavelengths:
         print(f"  质心坐标: ({cx:.4f}, {cy:.4f}) mm")
         print(f"  RMS 半径: {rms:.4f} mm")
         print(f"  GEO 半径: {geo:.4f} mm")
+
+#计算RMS和geo
+all_point = np.array(all_point)
+all_point.reshape(-1,3)
+all_point = torch.tensor(all_point)
+RMS, GEO, _ = spot_analysis(all_point)
+print("="*60)
+print(f"The RMS is {RMS:.4f}mm, and GEO is {GEO:.4f}mm")
+print("="*60)
+
 
     # ==================== 三波长点列图 ====================
 print("\n\n" + "=" * 60)
